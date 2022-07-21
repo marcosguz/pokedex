@@ -1,0 +1,43 @@
+.App {
+  display: flex;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+}
+
+.pokeball-background {
+  background-image: url(../src/image/pokeball.81cfacf9.png);
+  position: fixed;
+  -webkit-filter: brightness(200%);
+  filter: brightness(200%);
+  z-index: -1;
+  right: -90px;
+  top: -40px;
+  background-size: cover;
+  height: 400px;
+  width: 400px;
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.pokeball-background {
+  -webkit-animation: 3s rotate linear infinite;
+  animation: 3s rotate linear infinite;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
