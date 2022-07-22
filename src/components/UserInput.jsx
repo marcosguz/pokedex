@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { changeUser } from '../store/slices/user.slice';
 import '../css/styles/user-input.css'
 
 const UserInput = () => {
 
     const [ userName, setUserName ] = useState('')
 
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
     const submit = (e) => {
         e.preventDefault()
-        alert(userName)
+        dispatch(changeUser(userName))
+        navigate('/poke-dex')
     }
 
     return (

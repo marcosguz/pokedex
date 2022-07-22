@@ -40,6 +40,7 @@
     border: none;
     border-radius: 3rem;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, .3);
+    color: gray;
     height: 2rem;
     outline: none;
     padding-left: 1rem;
@@ -47,7 +48,7 @@
 }
 
 .button {
-    background-color: #4FFBDF;
+    background-color: #812625;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -58,7 +59,7 @@
 }
 
 .button:hover {
-    background-color: #00C2A8;
+    background-color: #a12a26;
 }
 
 .button i {
