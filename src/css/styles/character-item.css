@@ -60,6 +60,7 @@
 }
 
 .background {
+    animation: turn 10s infinite linear;
     background-image: url(/src/image/pokeball.81cfacf9.png);
     background-position: center;
     background-repeat: repeat;
@@ -67,6 +68,16 @@
     height: 50%;
     margin-right: .5rem;
     width: 76%;
+}
+
+@keyframes turn {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .img {
