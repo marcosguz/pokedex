@@ -18,7 +18,14 @@ const PokeDex = () => {
   return (
     <div className="container-content">
         
-      <h1 className="content-title">PokeDex</h1>
+      <span className="content-title">P</span>
+      <span className="content-title">o</span>
+      <span className="content-title">k</span>
+      <span className="content-title">e</span>
+      <span className="content-title">D</span>
+      <span className="content-title">e</span>
+      <span className="content-title">x</span>
+      
       <p className="content-subtitle">Welcome <b className="user">{user}</b>, here you can find your favorite pokemon.</p>
 
       <div className="content-list">
