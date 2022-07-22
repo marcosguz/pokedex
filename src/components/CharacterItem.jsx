@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import '../css/styles/character-item.css'
 
 const CharacterItem = ({ characterUrl }) => {
 
     const [ character, setCharacter ] = useState({})
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         axios.get(characterUrl)
@@ -14,7 +17,7 @@ const CharacterItem = ({ characterUrl }) => {
     console.log(character)
 
     return (
-        <div className='card'>
+        <div className='card' onClick={() => navigate(`/poke-dex/${character.id}`)}>
             <h3 className='card-title'>{character.name}</h3>
             <div className='content-card'>
                 <div className='card-content'>
