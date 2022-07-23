@@ -17,12 +17,12 @@ const PokeDex = () => {
   useEffect(() => {
     axios
       .get("https://pokeapi.co/api/v2/pokemon/")
-      .then((response) => setCharactes(response.data.results));
+      .then((response) => setCharactes(response.data.results.filter( pokemon => (pokemon.name.includes(characterSearch)) )));
 
     axios
       .get("https://pokeapi.co/api/v2/type/")
       .then((response) => setNames(response.data.results));
-  }, []);
+  }, [characterSearch]);
 
   const search = (e) => {
     e.preventDefault();
