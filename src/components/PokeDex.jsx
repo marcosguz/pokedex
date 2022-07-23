@@ -16,7 +16,7 @@ const PokeDex = () => {
 
   useEffect(() => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon/")
+      .get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=150")
       .then((response) => setCharactes(response.data.results.filter( pokemon => (pokemon.name.includes(characterSearch)) )));
 
     axios
@@ -34,6 +34,18 @@ const PokeDex = () => {
       .get(e.target.value)
       .then((response) => setCharactes(response.data.pokemon));
   };
+
+  //Const para paginación
+  const [page, setPage] = useState (1);
+  const [forPage, setPorPagina] = useState (10);
+
+  const lastPage = Math.ceil(characters.length / forPage);
+
+  console.log("Esta es la ultima pagina: "+lastPage)
+  const numbers = []; // [1, 2, 3, 4]
+  for (let i = 1; i <= lastPage; i++) {
+    numbers.push(i);
+  }
 
   return (
     <div className="container-content">
@@ -74,10 +86,19 @@ const PokeDex = () => {
       </div>
 
       <ul className="content-pokemons">
-        {characters.map((character) => (
+        {characters.slice((page-1)*forPage,(page-1)*forPage+forPage).map((character) => (
           <CharacterItem key={ character.url ? character.url : character.pokemon.url} characterUrl={ character.url ? character.url : character.pokemon.url} />
         ))}
       </ul>
+      <button onClick={() => setPage(page - 1)} disabled={page === 1}>
+        Prev page
+      </button>
+      {numbers.map((number) => (
+        <button onClick={() => setPage(number)}>{number}</button>
+      ))}
+      <button onClick={() => setPage(page + 1)} disabled={page === lastPage}>
+        Next Page
+      </button>
     </div>
   );
 };
