@@ -84,14 +84,13 @@
 }
 
 .list-pokemon {
-    /* border-bottom: 1px solid #DA1464; */
-    align-items: center;
     box-shadow: 3px 3px 7px rgba(218, 20, 10, .3);
+    border: none;
     color: #DA1464;
-    display: flex;
     font-weight: normal;
     height: 3rem;
-    justify-content: center;
+    outline: none;
+    text-align: center;
     width: 30%;
 }
 
@@ -99,22 +98,31 @@
     align-items: center;
     display: flex;
     height: 3rem;
-    width: 40%;
+    width: 43%;
 }
 
 .search {
     border: none;
-    border-radius: 1.3rem;
     box-shadow: 3px 3px 7px rgba(218, 20, 10, .3);
     color: #DA1464;
     font-size: 1.2rem;
-    height: 2.2rem;
+    height: 3rem;
     padding: 0 1rem 0 1rem;
     outline: none;
 }
 
 .search::placeholder{
     color: rgba(218, 20, 10, .3)
+}
+
+.search-button {
+    background-color: #FFF;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 7px rgba(218, 20, 10, .3);
+    color: #DA1464;
+    font-size: 1.2rem;
+    height: 3rem;
 }
 
 .content-pokemons {

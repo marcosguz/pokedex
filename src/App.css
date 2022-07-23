@@ -8,7 +8,7 @@
   position: fixed;
   -webkit-filter: brightness(200%);
   filter: brightness(200%);
-  z-index: 1;
+  z-index: -1;
   right: -90px;
   top: -40px;
   background-size: cover;

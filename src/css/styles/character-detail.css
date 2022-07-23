@@ -46,9 +46,9 @@
 }
 
 .pokemon {
-    background-color: #BEFBFF;
-    border-radius: .3rem;
-    box-shadow: 3px 5px 5px rgba(0, 0, 0, .3);
+    background-color: rgba(255, 140, 166, .6);
+    border-radius: 1rem;
+    box-shadow: 7px 7px 10px rgba(218, 20, 100, .4);
     margin: 0 auto;
     text-align: center;
     width: 90%;
@@ -60,7 +60,7 @@
     width: 80%;
 }
 
-.info {
+.infos {
     align-items: center;
     display: flex;
     justify-content: space-around;
@@ -80,7 +80,7 @@
     font-size: .9rem;
 }
 
-.info-name {
+.infos-name {
     color: #DA1464;
     display: inline-block;
     font-size: 2rem;
@@ -90,7 +90,7 @@
     text-shadow: 4px 2px 4px #A7398B;
 }
 
-.info-name::after,.info-name::before {
+.infos-name::after,.infos-name::before {
     background-color: currentColor;
     content: '';
     height: 3px;
@@ -99,11 +99,11 @@
     width: 120px;
 }
 
-.info-name::before {
+.infos-name::before {
     left: -130px;
 }
 
-.info-name::after {
+.infos-name::after {
     right: -130px;
 }
 
@@ -132,17 +132,17 @@
     width: 90%;
 }
 
-.type,
+.types,
 .abilities {
-    background-color: #BEFBFF;
-    border-radius: .3rem;
-    box-shadow: 3px 5px 5px rgba(0, 0, 0, .3);
+    background-color: rgba(255, 140, 166, .6);
+    border-radius: 1rem;
+    box-shadow: 7px 7px 10px rgba(218, 20, 100, .4);
     padding: .8rem;
     margin-bottom: 1rem;
     width: 40%;
 }
 
-.type-name {
+.types-name {
     color: #DA1464;
     display: flex;
     font-size: 1.3rem;
@@ -153,7 +153,7 @@
     width: 30%;
 }
 
-.type-name::after,.type-name::before {
+.types-name::after,.types-name::before {
     background-color: currentColor;
     content: '';
     height: 3px;
@@ -162,11 +162,11 @@
     width: 30%;
 }
 
-.type-name::before {
+.types-name::before {
     left: -30px;
 }
 
-.type-name::after {
+.types-name::after {
     right: -30px;
 }
 
@@ -180,27 +180,28 @@
 }
 
 .list {
-    background-color: #DA1464;
-    color: #FFF;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 1rem;
     font-weight: 500;
     font-style: normal;
     list-style: none;
     margin: 1rem;
     padding: .5rem;
     text-align: center;
+    width: 30%;
 }
 
 
 .stats {
-    background-color: #BEFBFF;
-    border-radius: .3rem;
-    box-shadow: 3px 5px 5px rgba(0, 0, 0, .3);
+    background-color: rgba(255, 140, 166, .6);
+    border-radius: 1rem;
+    box-shadow: 7px 7px 10px rgba(218, 20, 100, .4);
     padding: 1rem;
     margin: 0 auto;
     width: 87%;
 }
 
-.stat-name {
+.stats-name {
     color: #DA1464;
     display: flex;
     font-size: 1.3rem;
@@ -212,7 +213,7 @@
     width: 50%;
 }
 
-.stat-name::after,.stat-name::before {
+.stats-name::after,.stats-name::before {
     background-color: currentColor;
     content: '';
     height: 3px;
@@ -221,18 +222,18 @@
     width: 35%;
 }
 
-.stat-name::before {
+.stats-name::before {
     left: -0px;
 }
 
-.stat-name::after {
+.stats-name::after {
     right: -0px;
 }
 
 .hp,
-.speed,
-.attack,
-.defense {
+.speeds,
+.attacks,
+.defenses {
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -240,20 +241,23 @@
 }
 
 .hp-name,
-.speed-name,
-.attack-name,
-.defense-name {
-    background-color: #DA1464;
+.speeds-name,
+.attacks-name,
+.defenses-name {
+    align-items: center;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 1rem;
+    display: flex;
     height: 2rem;
-    text-align: center;
+    justify-content: center;
     width: 10%;
 }
 
 .hp-name p,
-.speed-name p,
-.attack-name p,
-.defense-name p {
-    color: #FFF;
+.speeds-name p,
+.attacks-name p,
+.defenses-name p {
+    color: #000;
     margin: 0;
 }
 
@@ -261,24 +265,46 @@
 .background-speed,
 .background-attack,
 .background-defense {
-    background-color: #DA1464;
-    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 1rem;
     width: 85%;
 }
 
 .percentaje {
+    border-radius: 1rem;
     height: 2rem;
-    width: 2rem;
-    background-color: #A7398B;
+    
 }
 
 .pokemon-movements {
-    background-color: #BEFBFF;
-    border-radius: .3rem;
-    box-shadow: 3px 5px 5px rgba(0, 0, 0, .3);
-    padding: 1rem;
     text-align: center;
     width: 20%;
+}
+
+.encounters, 
+.movements {
+    background-color: rgba(255, 140, 166, .6);
+    border-radius: 1rem;
+    box-shadow: 7px 7px 10px rgba(218, 20, 100, .4);
+    margin-bottom: 2rem;
+}
+
+.encounters {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+}
+
+.encounters:hover {
+    background-color: rgb(255, 188, 224);
+}
+
+.ecounters-title {
+    color: #DA1464;
+    font-size: 1.3rem;
+    text-shadow: 4px 2px 4px #A7398B;
 }
 
 .movements-title {
@@ -305,7 +331,8 @@
 }
 
 .movements-item {
-    background-color: #54BAC3;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 1rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -315,5 +342,5 @@
 }
 
 .movements-item:hover {
-    background-color: #BEFBFF;
+    background-color: rgb(255, 188, 224);
 }

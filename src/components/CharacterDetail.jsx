@@ -30,7 +30,7 @@ const CharacterDetail = () => {
                         <div className='pokemon'>
                             <img src={character.sprites?.other.dream_world.front_default} alt="" className='pokemon-img'/>
                             <div className="pokemon-info">
-                                <div className="info">
+                                <div className="infos">
                                     <div className="weight">
                                         <p className='number'>{character.weight}</p>
                                         <p className='text'>Weight</p>
@@ -42,7 +42,7 @@ const CharacterDetail = () => {
                                 </div>
 
                                 
-                                <h3 className='info-name'>{character.name}</h3>
+                                <h3 className='infos-name'>{character.name}</h3>
 
                                 <div className="pokemon-id">
                                     <span>#:</span>
@@ -52,8 +52,8 @@ const CharacterDetail = () => {
                         </div>
 
                         <div className="card-type-abilities">
-                            <div className="type">
-                                <h3 className='type-name'>Type</h3>
+                            <div className="types">
+                                <h3 className='types-name'>Type</h3>
                                 <ul className='item'>
                                     {
                                         character.types?.map(type => (
@@ -66,7 +66,7 @@ const CharacterDetail = () => {
                             </div>
 
                             <div className="abilities">
-                                <h3 className='type-name'>Abilities</h3>
+                                <h3 className='types-name'>Abilities</h3>
                                 <ul className='item'>
                                     {
                                         character.abilities?.map(ability => (
@@ -80,7 +80,7 @@ const CharacterDetail = () => {
                         </div>
 
                         <div className="stats">
-                            <h3 className='stat-name'>Stats Base</h3>
+                            <h3 className='stats-name'>Stats Base</h3>
                             <div className="hp">
                                 <div className="hp-name">
                                     <p>HP:</p>
@@ -92,8 +92,8 @@ const CharacterDetail = () => {
                                 </div>
                             </div>
 
-                            <div className="speed">
-                                <div className="speed-name">
+                            <div className="speeds">
+                                <div className="speeds-name">
                                     <p>Speed:</p>
                                 </div>
                                 <div className="background-speed">
@@ -101,8 +101,8 @@ const CharacterDetail = () => {
                                 </div>
                             </div>
 
-                            <div className="attack">
-                                <div className="attack-name">
+                            <div className="attacks">
+                                <div className="attacks-name">
                                     <p>Attack:</p>
                                 </div>
                                 <div className="background-attack">
@@ -110,8 +110,8 @@ const CharacterDetail = () => {
                                 </div>
                             </div>
 
-                            <div className="defense">
-                                <div className="defense-name">
+                            <div className="defenses">
+                                <div className="defenses-name">
                                     <p>Defense:</p>
                                 </div>
                                 <div className="background-defense">
@@ -123,7 +123,9 @@ const CharacterDetail = () => {
 
                     <div className="pokemon-movements">
                         <div className="encounters">
-
+                            <h3 className='ecounters-title'>
+                                <i class="fa-solid fa-location-dot"></i> Ecounters
+                            </h3>
                         </div>
                         <div className="movements">
                             <h3 className='movements-title'>Movements</h3>
