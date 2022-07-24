@@ -95,10 +95,11 @@
 }
 
 .list-search {
+    background-color: #DA1464;
     align-items: center;
     display: flex;
     height: 3rem;
-    width: 43%;
+    width: 33%;
 }
 
 .search {
@@ -113,16 +114,6 @@
 
 .search::placeholder{
     color: rgba(218, 20, 10, .3)
-}
-
-.search-button {
-    background-color: #FFF;
-    border: none;
-    cursor: pointer;
-    box-shadow: 3px 3px 7px rgba(218, 20, 10, .3);
-    color: #DA1464;
-    font-size: 1.2rem;
-    height: 3rem;
 }
 
 .buttons {

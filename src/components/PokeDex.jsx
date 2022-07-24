@@ -86,7 +86,6 @@ const PokeDex = () => {
             onChange={(e) => setCharacteSearch(e.target.value)}
             className="search"
           />
-          <button className="search-button">Search</button>
         </form>
       </div>
 
