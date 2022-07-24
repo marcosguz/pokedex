@@ -14,8 +14,6 @@ const CharacterItem = ({ characterUrl }) => {
              .then(response => setCharacter(response.data))
     }, [])
 
-    console.log(character)
-
     return (
         <div className='card' onClick={() => navigate(`/poke-dex/${character.id}`)}>
             <h3 className='card-title'>{character.name}</h3>

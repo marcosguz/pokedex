@@ -16,7 +16,7 @@ const PokeDex = () => {
 
   useEffect(() => {
     axios
-      .get("https://pokeapi.co/api/v2/pokemon/")
+      .get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=150")
       .then((response) =>
         setCharactes(
           response.data.results.filter((pokemon) =>
@@ -40,6 +40,17 @@ const PokeDex = () => {
       .get(e.target.value)
       .then((response) => setCharactes(response.data.pokemon));
   };
+
+  //Const para paginación
+  const [page, setPage] = useState(1);
+  const [forPage, setPorPagina] = useState(12);
+
+  const lastPage = Math.ceil(characters.length / forPage);
+
+  const numbers = []; // [1, 2, 3, 4]
+  for (let i = 1; i <= lastPage; i++) {
+    numbers.push(i);
+  }
 
   return (
     <div className="container-content">
@@ -79,13 +90,31 @@ const PokeDex = () => {
         </form>
       </div>
 
-      <ul className="content-pokemons">
-        {characters.map((character) => (
-          <CharacterItem
-            key={character.url ? character.url : character.pokemon.url}
-            characterUrl={character.url ? character.url : character.pokemon.url}
-          />
+      <div className="buttons">
+        <button className="prev" onClick={() => setPage(page - 1)} disabled={page === 1}>
+          <i class="fa-solid fa-angles-left"></i>
+        </button>
+        {numbers.map((number) => (
+          <button className="numbers-buttons" onClick={() => setPage(number)}>
+            {number}
+          </button>
         ))}
+        <button className="next" onClick={() => setPage(page + 1)} disabled={page === lastPage}>
+          <i class="fa-solid fa-angles-right"></i>
+        </button>
+      </div>
+
+      <ul className="content-pokemons">
+        {characters
+          .slice((page - 1) * forPage, (page - 1) * forPage + forPage)
+          .map((character) => (
+            <CharacterItem
+              key={character.url ? character.url : character.pokemon.url}
+              characterUrl={
+                character.url ? character.url : character.pokemon.url
+              }
+            />
+          ))}
       </ul>
     </div>
   );
