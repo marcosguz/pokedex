@@ -17,7 +17,13 @@ const PokeDex = () => {
   useEffect(() => {
     axios
       .get("https://pokeapi.co/api/v2/pokemon/")
-      .then((response) => setCharactes(response.data.results.filter( pokemon => (pokemon.name.includes(characterSearch)) )));
+      .then((response) =>
+        setCharactes(
+          response.data.results.filter((pokemon) =>
+            pokemon.name.includes(characterSearch)
+          )
+        )
+      );
 
     axios
       .get("https://pokeapi.co/api/v2/type/")
@@ -75,7 +81,10 @@ const PokeDex = () => {
 
       <ul className="content-pokemons">
         {characters.map((character) => (
-          <CharacterItem key={ character.url ? character.url : character.pokemon.url} characterUrl={ character.url ? character.url : character.pokemon.url} />
+          <CharacterItem
+            key={character.url ? character.url : character.pokemon.url}
+            characterUrl={character.url ? character.url : character.pokemon.url}
+          />
         ))}
       </ul>
     </div>
