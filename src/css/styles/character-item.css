@@ -3,9 +3,11 @@
     border-radius: 1rem;
     box-shadow: 7px 7px 10px rgba(218, 20, 100, .4);
     cursor: pointer;
-    margin: 2rem;
     text-align: center;
-    width: 25%;
+    width: 280px;
+    height: 300px;
+    margin-right: 10px;
+    margin-left: 30px;
 }
 
 .card:hover {
@@ -89,3 +91,6 @@
     display: flex;
     justify-content: left;
 }
+::-webkit-scrollbar {
+    display: none;
+    }

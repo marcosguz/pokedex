@@ -15,7 +15,8 @@ const CharacterItem = ({ characterUrl }) => {
     }, [])
 
     return (
-        <div className='card' onClick={() => navigate(`/poke-dex/${character.id}`)}>
+        <div className="content-pokemons row">
+        <div className='card col-sm-1 col-lg-3' onClick={() => navigate(`/poke-dex/${character.id}`)}>
             <h3 className='card-title'>{character.name}</h3>
             <div className='content-card'>
                 <div className='card-content'>
@@ -51,6 +52,7 @@ const CharacterItem = ({ characterUrl }) => {
                 </div>
             </div>
         </div>
+    </div>
     );
 };
 
