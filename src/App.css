@@ -1,6 +1,7 @@
 .App {
   display: flex;
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  overflow:hidden
 }
 
 .pokeball-background {
@@ -15,6 +16,7 @@
   height: 400px;
   width: 400px;
   animation-direction: reverse;
+
 }
 
 @keyframes rotate {
@@ -41,3 +43,47 @@
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
 }
+
+
+  /* //Tablets en horizonal y escritorios normales */
+
+ 
+/* / Móviles en horizontal o tablets en vertical */
+@media (max-width: 767px) { 
+  .pokeball-background {
+    background-image: url(../src/image/pokeball.81cfacf9.png);
+    position: fixed;
+    -webkit-filter: brightness(200%);
+    filter: brightness(200%);
+    z-index: -1;
+    right: -90px;
+    top: -40px;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    animation-direction: reverse;
+  }
+ }
+ 
+/* / Móviles en vertical */
+@media (max-width: 480px) { 
+  .pokeball-background {
+    background-image: url(../src/image/pokeball.81cfacf9.png);
+    position: fixed;
+    -webkit-filter: brightness(200%);
+    filter: brightness(200%);
+    z-index: -1;
+    right: -90px;
+    top: -40px;
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+    animation-direction: reverse;
+  }
+  .pokemon-title-container{
+    text-align: center;
+}
+.content-subtitle {
+  text-align: center;
+}
+ }

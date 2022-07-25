@@ -5,6 +5,7 @@ import CharacterItem from "./CharacterItem";
 import { useNavigate } from "react-router-dom";
 import "../css/styles/poke-dex.css";
 
+
 const PokeDex = () => {
   const [characters, setCharactes] = useState([]);
   const [names, setNames] = useState([]);
@@ -54,6 +55,7 @@ const PokeDex = () => {
 
   return (
     <div className="container-content">
+      <div className="pokemon-title-container">
       <span className="content-title">P</span>
       <span className="content-title">o</span>
       <span className="content-title">k</span>
@@ -61,14 +63,14 @@ const PokeDex = () => {
       <span className="content-title">D</span>
       <span className="content-title">e</span>
       <span className="content-title">x</span>
-
+      </div>
       <p className="content-subtitle">
         Welcome <b className="user">{user}</b>, here you can find your favorite
         pokemon.
       </p>
 
-      <div className="content-list">
-        <select className="list-pokemon" onChange={filterName}>
+      <div className="content-list row">
+        <select className="list-pokemon col-sm-5 col-lg-6" onChange={filterName}>
           <option value="" className="options">
             All Pokemons
           </option>
@@ -78,7 +80,7 @@ const PokeDex = () => {
             </option>
           ))}
         </select>
-        <form className="list-search" onSubmit={search}>
+        <form className="list-search col-sm-5 col-lg-6" onSubmit={search}>
           <input
             type="text"
             placeholder="Search here..."
@@ -89,7 +91,7 @@ const PokeDex = () => {
         </form>
       </div>
 
-      <div className="buttons">
+      <div className="buttons row">
         <button className="prev" onClick={() => setPage(page - 1)} disabled={page === 1}>
           <i class="fa-solid fa-angles-left"></i>
         </button>

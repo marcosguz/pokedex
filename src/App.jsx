@@ -10,7 +10,8 @@ function App() {
   return (
     <HashRouter>
       <div className='App'>
-        <div className='pokeball-background'></div>
+      <div className='pokeball-background'>
+        </div>
         <Routes>
           <Route path='/' element = {<UserInput/>}/>
 
