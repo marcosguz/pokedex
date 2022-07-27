@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import '../css/styles/character-detail.css'
 
 const CharacterDetail = () => {
@@ -13,13 +13,15 @@ const CharacterDetail = () => {
              .then(response => setCharacter(response.data))
     }, [])
 
+    const navigate = useNavigate()
+
     console.log(character)
 
     return (
         <div className='character-detail'>
             <div className="character-content">
                 <div className='character-button'>
-                    <button className='button-icon'>
+                    <button className='button-icon' onClick={() => navigate(-1)}>
                         <i class="icon fa-solid fa-arrow-left"></i>
                     </button>
                 </div>
